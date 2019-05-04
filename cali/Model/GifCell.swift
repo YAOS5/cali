@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PreviewCell: UICollectionViewCell {
+class GifCell: UICollectionViewCell {
     @IBOutlet weak var gifImageView: UIImageView!
     
 }

@@ -14,6 +14,7 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     
     
     @IBOutlet var sceneView: ARSKView!
+    @IBOutlet weak var gifCellCollection: UICollectionView!
     
     let testArray : [String] = ["是", "的", "是", "的", "是", "的", "是", "的", "是", "的"]
     
@@ -87,17 +88,27 @@ extension ARViewController {
 
 
 extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
+    // handles the usage of the collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return testArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! PreviewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! GifCell
         cell.gifImageView.image = UIImage(named: testArray[indexPath.row])
         return cell
     }
     
-    // handles the usage of the collection view
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! GifCell
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! GifCell
+        cell.layer.borderWidth = 0
+    }
+    
     
 }

@@ -15,7 +15,7 @@
 		495EC92E227D54CC00B7451A /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC92D227D54CC00B7451A /* ARViewController.swift */; };
 		495EC932227D589600B7451A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC931227D589600B7451A /* Scene.swift */; };
 		495EC934227D58B400B7451A /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 495EC933227D58B400B7451A /* Scene.sks */; };
-		495EC936227D6BDE00B7451A /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC935227D6BDE00B7451A /* PreviewCell.swift */; };
+		495EC936227D6BDE00B7451A /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC935227D6BDE00B7451A /* GifCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		495EC92D227D54CC00B7451A /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		495EC931227D589600B7451A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		495EC933227D58B400B7451A /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
-		495EC935227D6BDE00B7451A /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		495EC935227D6BDE00B7451A /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			children = (
 				495EC931227D589600B7451A /* Scene.swift */,
 				495EC933227D58B400B7451A /* Scene.sks */,
-				495EC935227D6BDE00B7451A /* PreviewCell.swift */,
+				495EC935227D6BDE00B7451A /* GifCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				495EC932227D589600B7451A /* Scene.swift in Sources */,
-				495EC936227D6BDE00B7451A /* PreviewCell.swift in Sources */,
+				495EC936227D6BDE00B7451A /* GifCell.swift in Sources */,
 				495EC92E227D54CC00B7451A /* ARViewController.swift in Sources */,
 				495EC8F9227D4AA700B7451A /* LangSelectViewController.swift in Sources */,
 				495EC8F7227D4AA700B7451A /* AppDelegate.swift in Sources */,
