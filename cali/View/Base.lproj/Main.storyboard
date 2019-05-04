@@ -26,6 +26,30 @@
                                     <segue destination="nKg-MN-1v4" kind="show" id="HM5-TE-Ocv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-Y6-QBf">
+                                <rect key="frame" x="123" y="110" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download Chinese"/>
+                                <connections>
+                                    <action selector="ChineseSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLM-us-Ppo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-Ed-cM7">
+                                <rect key="frame" x="125" y="173" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download Bangla"/>
+                                <connections>
+                                    <action selector="BanglaSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94c-fM-PRP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bld-FI-Ah5">
+                                <rect key="frame" x="126" y="241" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Download Arabic"/>
+                                <connections>
+                                    <action selector="ArabicSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="We3-6M-DSp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -16,7 +16,19 @@ class LangSelectViewController: UIViewController {
     }
     
     
-
+    
+    @IBAction func ChineseSelected(_ sender: UIButton) {
+        networking("chinese")
+    }
+    
+    
+    @IBAction func BanglaSelected(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func ArabicSelected(_ sender: UIButton) {
+    }
+    
     
 
 }

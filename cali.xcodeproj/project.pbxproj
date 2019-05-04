@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491D1DE9227DBA6C00AB2E01 /* networkingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D1DE8227DBA6C00AB2E01 /* networkingExtension.swift */; };
 		495EC8F7227D4AA700B7451A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC8F6227D4AA700B7451A /* AppDelegate.swift */; };
 		495EC8F9227D4AA700B7451A /* LangSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC8F8227D4AA700B7451A /* LangSelectViewController.swift */; };
 		495EC8FC227D4AA700B7451A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495EC8FA227D4AA700B7451A /* Main.storyboard */; };
@@ -16,9 +17,12 @@
 		495EC932227D589600B7451A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC931227D589600B7451A /* Scene.swift */; };
 		495EC934227D58B400B7451A /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 495EC933227D58B400B7451A /* Scene.sks */; };
 		495EC936227D6BDE00B7451A /* GifCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC935227D6BDE00B7451A /* GifCell.swift */; };
+		82D2FBF248805C7901FB0D01 /* Pods_cali.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA8201057097A5DACBE8AAD7 /* Pods_cali.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		432464610C13BFE303F98548 /* Pods-cali.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cali.release.xcconfig"; path = "Pods/Target Support Files/Pods-cali/Pods-cali.release.xcconfig"; sourceTree = "<group>"; };
+		491D1DE8227DBA6C00AB2E01 /* networkingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingExtension.swift; sourceTree = "<group>"; };
 		495EC8F3227D4AA700B7451A /* cali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495EC8F6227D4AA700B7451A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		495EC8F8227D4AA700B7451A /* LangSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangSelectViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		495EC931227D589600B7451A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		495EC933227D58B400B7451A /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
 		495EC935227D6BDE00B7451A /* GifCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCell.swift; sourceTree = "<group>"; };
+		97D4506FE710A5E7DCE9078A /* Pods-cali.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cali.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cali/Pods-cali.debug.xcconfig"; sourceTree = "<group>"; };
+		EA8201057097A5DACBE8AAD7 /* Pods_cali.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cali.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D2FBF248805C7901FB0D01 /* Pods_cali.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35CF2B037D53A630D74EC71A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97D4506FE710A5E7DCE9078A /* Pods-cali.debug.xcconfig */,
+				432464610C13BFE303F98548 /* Pods-cali.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		491D1DE7227DBA3D00AB2E01 /* LangSelect */ = {
+			isa = PBXGroup;
+			children = (
+				495EC8F8227D4AA700B7451A /* LangSelectViewController.swift */,
+				491D1DE8227DBA6C00AB2E01 /* networkingExtension.swift */,
+			);
+			path = LangSelect;
+			sourceTree = "<group>";
+		};
 		495EC8EA227D4AA700B7451A = {
 			isa = PBXGroup;
 			children = (
 				495EC8F5227D4AA700B7451A /* cali */,
 				495EC8F4227D4AA700B7451A /* Products */,
+				35CF2B037D53A630D74EC71A /* Pods */,
+				C1E0B8A7E24CB5C32E569EC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +121,18 @@
 		495EC92C227D549900B7451A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				495EC8F8227D4AA700B7451A /* LangSelectViewController.swift */,
+				491D1DE7227DBA3D00AB2E01 /* LangSelect */,
 				495EC92D227D54CC00B7451A /* ARViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C1E0B8A7E24CB5C32E569EC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA8201057097A5DACBE8AAD7 /* Pods_cali.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 495EC905227D4AA900B7451A /* Build configuration list for PBXNativeTarget "cali" */;
 			buildPhases = (
+				20E74454157FA85F27E8D655 /* [CP] Check Pods Manifest.lock */,
 				495EC8EF227D4AA700B7451A /* Sources */,
 				495EC8F0227D4AA700B7451A /* Frameworks */,
 				495EC8F1227D4AA700B7451A /* Resources */,
+				ED1237EB0FF2FC1B2FCD4CEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,12 +204,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20E74454157FA85F27E8D655 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cali-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED1237EB0FF2FC1B2FCD4CEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cali/Pods-cali-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cali/Pods-cali-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		495EC8EF227D4AA700B7451A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				495EC932227D589600B7451A /* Scene.swift in Sources */,
+				491D1DE9227DBA6C00AB2E01 /* networkingExtension.swift in Sources */,
 				495EC936227D6BDE00B7451A /* GifCell.swift in Sources */,
 				495EC92E227D54CC00B7451A /* ARViewController.swift in Sources */,
 				495EC8F9227D4AA700B7451A /* LangSelectViewController.swift in Sources */,
@@ -320,6 +399,7 @@
 		};
 		495EC906227D4AA900B7451A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97D4506FE710A5E7DCE9078A /* Pods-cali.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +418,7 @@
 		};
 		495EC907227D4AA900B7451A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432464610C13BFE303F98548 /* Pods-cali.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
