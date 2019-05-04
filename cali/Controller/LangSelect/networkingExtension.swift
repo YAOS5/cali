@@ -16,7 +16,7 @@ extension LangSelectViewController {
                           headers: ["Content-Type": "application/x-www-form-urlencoded"]).responseJSON
             { response in
                 if response.error == nil {
-                    print(response)
+                    //
                 }
                 else {
                     // Literally do nothing
