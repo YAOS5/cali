@@ -9,7 +9,7 @@
 import UIKit
 
 protocol didPressButton {
-    func buttonPressed()
+    func buttonPressed(_ country: String)
 }
 
 class Slide: UIView {
@@ -19,7 +19,7 @@ class Slide: UIView {
     
     var delegate : didPressButton?
     @IBAction func countryButtonPressed(_ sender: UIButton) {
-        delegate?.buttonPressed()
+        delegate?.buttonPressed(countryText.text!)
     }
     
 }

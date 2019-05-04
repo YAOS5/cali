@@ -18,9 +18,10 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     @IBOutlet var sceneView: ARSKView!
     @IBOutlet weak var gifCellCollection: UICollectionView!
     
-    let imageArray : [String] = ["是", "不"]
+    var imageArray : [String] = ["不", "中", "他", "是", "有", "来", "这", "的"]
     let scene = SKScene(fileNamed: "Scene") as! Scene
     var cellSelectedAt = 0
+    var languageSelected = "Chinese"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,21 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         backButton.layer.shadowOffset = CGSize(width: 1, height: 1)
         backButton.layer.shadowRadius = 3
         backButton.layer.shadowOpacity = 1.0
+        
+        
+        // Configure imageArray
+        if languageSelected == "Chinese" {
+            imageArray = ["不", "中", "他", "是", "有", "来", "这", "的"]
+        }
+            
+        else if languageSelected == "Bangla" {
+            imageArray = ["1", "2", "3", "4", "5"]
+        }
+            
+        else {
+            // if it is arabic
+            imageArray = ["a", "b", "c", "d", "e"]
+        }
     }
     
     
@@ -108,7 +124,12 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! GifCell
-        cell.gifImageView!.loadGif(asset: ("不" + "gif"))
+        if languageSelected == "Chinese" {
+            cell.gifImageView!.loadGif(asset: (imageArray[indexPath.row] + "gif"))
+        }
+        else {
+            cell.gifImageView!.image = UIImage(named: imageArray[indexPath.row])
+        }
         cell.charName = imageArray[indexPath.row]
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.white.cgColor
@@ -140,3 +161,5 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
         scene.removeAllChildren()
     }
 }
+
+

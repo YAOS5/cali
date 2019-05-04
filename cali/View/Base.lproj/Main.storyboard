@@ -52,11 +52,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-Ob-iRU">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="357" width="375" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="YsO-Ip-0Nf"/>
+                                    <constraint firstAttribute="height" constant="310" id="JJc-cn-3Vk"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="76T-3r-KuT">
                                     <size key="itemSize" width="100" height="100"/>
@@ -78,10 +78,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="I82-I2-cuS" firstAttribute="top" secondItem="H4I-mP-BpG" secondAttribute="top" id="8xE-if-V7H"/>
-                                            <constraint firstItem="I82-I2-cuS" firstAttribute="leading" secondItem="H4I-mP-BpG" secondAttribute="leading" id="DW7-Il-sPC"/>
-                                            <constraint firstAttribute="trailing" secondItem="I82-I2-cuS" secondAttribute="trailing" id="qXt-zN-ph7"/>
-                                            <constraint firstAttribute="bottom" secondItem="I82-I2-cuS" secondAttribute="bottom" id="rfe-i8-Bay"/>
+                                            <constraint firstItem="I82-I2-cuS" firstAttribute="top" secondItem="H4I-mP-BpG" secondAttribute="top" id="0jc-uW-gnD"/>
+                                            <constraint firstItem="I82-I2-cuS" firstAttribute="leading" secondItem="H4I-mP-BpG" secondAttribute="leading" id="6Uv-LT-wXT"/>
+                                            <constraint firstAttribute="trailing" secondItem="I82-I2-cuS" secondAttribute="trailing" id="HrI-89-lem"/>
+                                            <constraint firstAttribute="bottom" secondItem="I82-I2-cuS" secondAttribute="bottom" id="p2v-wJ-fGg"/>
                                         </constraints>
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
@@ -95,7 +95,7 @@
                                 </connections>
                             </collectionView>
                             <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dy-Pa-L1A">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
                             </arskView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve1-0o-9UN">
                                 <rect key="frame" x="10" y="30" width="50" height="50"/>

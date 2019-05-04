@@ -14,11 +14,12 @@ class LangSelectViewController: UIViewController, UIScrollViewDelegate, didPress
     @IBOutlet weak var pageControl: UIPageControl!
     
     var slides = [Slide]()
-    let language = ["Chinese", "Bangla", "Arabic"]
+    let languageArray = ["Chinese", "Bangla", "Arabic"]
+    var languageSelected = ""
     
     func createSlides(){
         for index in 0..<3 {
-            let slide : Slide = createSingleSlide(language[index])
+            let slide : Slide = createSingleSlide(languageArray[index])
             /* Setting up delegate to trigger segue */
             slides.append(slide)
         }
@@ -69,8 +70,27 @@ class LangSelectViewController: UIViewController, UIScrollViewDelegate, didPress
         return slide
     }
     
-    func buttonPressed() {
+    func buttonPressed(_ country: String) {
+        languageSelected = country
         performSegue(withIdentifier: "toAR", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if languageSelected == "Chinese" {
+            let ARVC = segue.destination as! ARViewController
+            ARVC.languageSelected = "Chinese"
+        }
+        
+        else if languageSelected == "Bangla" {
+            let ARVC = segue.destination as! ARViewController
+            ARVC.languageSelected = "Bangla"
+        }
+        
+        else {
+            // if it is arabic
+            let ARVC = segue.destination as! ARViewController
+            ARVC.languageSelected = "Arabic"
+        }
     }
     
 }
