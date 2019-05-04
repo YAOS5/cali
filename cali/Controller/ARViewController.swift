@@ -54,10 +54,10 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKLabelNode(text: "👾")
-        labelNode.horizontalAlignmentMode = .center
-        labelNode.verticalAlignmentMode = .center
-        return labelNode;
+        let node = SKSpriteNode(imageNamed: "test1")
+        // Making the node transparent
+        node.alpha = 0.5
+        return node;
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
