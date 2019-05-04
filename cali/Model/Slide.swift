@@ -11,6 +11,7 @@ import UIKit
 
 
 class Slide: UIView {
-    @IBOutlet weak var countryImage: UIImageView!
+    
+    @IBOutlet weak var countryButton: UIButton!
     @IBOutlet weak var countryText: UILabel!
 }

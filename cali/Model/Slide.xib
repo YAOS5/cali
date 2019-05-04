@@ -19,15 +19,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-tR-tZQ" userLabel="background">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-eZ-n2L">
-                    <rect key="frame" x="165.5" y="229" width="83" height="27"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="83" id="80F-Qf-2pV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhH-zJ-3tQ">
                     <rect key="frame" x="123.5" y="266" width="167" height="52"/>
                     <constraints>
@@ -46,35 +37,48 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vr5-cC-MCo" userLabel="countryImage">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-eZ-n2L">
+                    <rect key="frame" x="157" y="229" width="100" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="O6S-OV-8QI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4x-H9-h1N">
                     <rect key="frame" x="117" y="358" width="180" height="180"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="180" id="hvk-QF-oJE"/>
-                        <constraint firstAttribute="width" constant="180" id="zy0-yP-Qfl"/>
+                        <constraint firstAttribute="height" constant="180" id="egK-lR-pOx"/>
+                        <constraint firstAttribute="width" constant="180" id="ele-9T-bvG"/>
                     </constraints>
-                </imageView>
+                    <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Liz-3e-CPr" firstAttribute="top" secondItem="Vr5-cC-MCo" secondAttribute="bottom" constant="40" id="7rY-cd-dXY"/>
-                <constraint firstItem="Vr5-cC-MCo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DHF-b7-EWy"/>
                 <constraint firstItem="EhH-zJ-3tQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F9f-yE-MFB"/>
                 <constraint firstAttribute="bottom" secondItem="fZh-tR-tZQ" secondAttribute="bottom" id="GHp-S3-diK"/>
                 <constraint firstItem="Liz-3e-CPr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HGf-lx-YRg"/>
                 <constraint firstItem="Hhg-eZ-n2L" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IeJ-yh-NaW"/>
                 <constraint firstItem="fZh-tR-tZQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VGi-wU-vBJ"/>
-                <constraint firstItem="Vr5-cC-MCo" firstAttribute="top" secondItem="EhH-zJ-3tQ" secondAttribute="bottom" constant="40" id="X86-mw-g69"/>
-                <constraint firstItem="Vr5-cC-MCo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="a8N-9H-WBw"/>
+                <constraint firstItem="v4x-H9-h1N" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dK9-WU-8Rv"/>
+                <constraint firstItem="v4x-H9-h1N" firstAttribute="top" secondItem="EhH-zJ-3tQ" secondAttribute="bottom" constant="40" id="dLa-AA-49A"/>
                 <constraint firstItem="fZh-tR-tZQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eP6-Dd-3af"/>
                 <constraint firstItem="fZh-tR-tZQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lUK-TM-WIj"/>
+                <constraint firstItem="v4x-H9-h1N" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lip-jL-ozN"/>
                 <constraint firstItem="EhH-zJ-3tQ" firstAttribute="top" secondItem="Hhg-eZ-n2L" secondAttribute="bottom" constant="10" id="maH-RE-azH"/>
+                <constraint firstItem="Liz-3e-CPr" firstAttribute="top" secondItem="v4x-H9-h1N" secondAttribute="bottom" constant="40" id="yUy-0s-Fag"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="countryImage" destination="Vr5-cC-MCo" id="Jqn-VV-4Lw"/>
+                <outlet property="countryButton" destination="v4x-H9-h1N" id="lYn-t4-53K"/>
                 <outlet property="countryText" destination="Liz-3e-CPr" id="pPC-ec-hW1"/>
             </connections>
-            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+            <point key="canvasLocation" x="52.173913043478265" y="47.544642857142854"/>
         </view>
     </objects>
     <resources>

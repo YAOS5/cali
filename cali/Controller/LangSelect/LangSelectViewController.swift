@@ -62,7 +62,7 @@ class LangSelectViewController: UIViewController, UIScrollViewDelegate {
     
     func createSingleSlide(_ language: String) -> Slide {
         let slide : Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide.countryImage.image = UIImage(named: language)
+        slide.countryButton!.setImage(UIImage(named: language), for: .normal)
         slide.countryText.text = language
         return slide
     }
