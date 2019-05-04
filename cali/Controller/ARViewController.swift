@@ -17,6 +17,8 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     @IBOutlet weak var gifCellCollection: UICollectionView!
     
     let testArray : [String] = ["是", "的", "是", "的", "是", "的", "是", "的", "是", "的"]
+    let scene = SKScene(fileNamed: "Scene") as! Scene
+    var cellSelectedAt = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,8 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         sceneView.showsNodeCount = true
         
         // Load the SKScene from 'Scene.sks'
-        if let scene = SKScene(fileNamed: "Scene") {
-            sceneView.presentScene(scene)
-        }
+        sceneView.presentScene(scene)
+
     }
     
     
@@ -57,7 +58,7 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let node = SKSpriteNode(imageNamed: "是")
+        let node = SKSpriteNode(imageNamed: testArray[cellSelectedAt])
         // Making the node transparent
         node.alpha = 0.5
         node.size.width = 50
@@ -96,6 +97,8 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! GifCell
         cell.gifImageView.image = UIImage(named: testArray[indexPath.row])
+        cell.charName = testArray[indexPath.row]
+        print(testArray[indexPath.row])
         return cell
     }
     
@@ -103,12 +106,12 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
         let cell = collectionView.cellForItem(at: indexPath) as! GifCell
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.red.cgColor
+        cellSelectedAt = indexPath.row
+        scene.displayImage()
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GifCell
         cell.layer.borderWidth = 0
     }
-    
-    
 }

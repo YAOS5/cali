@@ -19,7 +19,9 @@ class Scene: SKScene {
         // Called before each frame is rendered
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    
+    func displayImage() {
         guard let sceneView = self.view as? ARSKView else { return }
         
         // Create anchor using the camera's current position
