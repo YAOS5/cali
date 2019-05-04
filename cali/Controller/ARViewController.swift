@@ -15,6 +15,8 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     
     @IBOutlet var sceneView: ARSKView!
     
+    let testArray : [String] = ["是", "的", "是", "的", "是", "的", "是", "的", "是", "的"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,9 +56,11 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let node = SKSpriteNode(imageNamed: "test1")
+        let node = SKSpriteNode(imageNamed: "是")
         // Making the node transparent
         node.alpha = 0.5
+        node.size.width = 50
+        node.size.height = 50
         return node;
     }
     
@@ -75,4 +79,25 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         
     }
 
+}
+
+extension ARViewController {
+    // handles deletion and other functionalities
+}
+
+
+extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return testArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! PreviewCell
+        cell.gifImageView.image = UIImage(named: testArray[indexPath.row])
+        return cell
+    }
+    
+    // handles the usage of the collection view
+    
 }
