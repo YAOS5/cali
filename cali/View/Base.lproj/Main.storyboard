@@ -18,46 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XQ-AY-UrD">
-                                <rect key="frame" x="167" y="469" width="40" height="30"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ScM-HK-xQx">
+                                <rect key="frame" x="168" y="530" width="39" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-qV-j2m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To AR"/>
-                                <connections>
-                                    <segue destination="nKg-MN-1v4" kind="show" id="HM5-TE-Ocv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-Y6-QBf">
-                                <rect key="frame" x="123" y="110" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download Chinese"/>
-                                <connections>
-                                    <action selector="ChineseSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PLM-us-Ppo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-Ed-cM7">
-                                <rect key="frame" x="125" y="173" width="119" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download Bangla"/>
-                                <connections>
-                                    <action selector="BanglaSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94c-fM-PRP"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bld-FI-Ah5">
-                                <rect key="frame" x="126" y="241" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Download Arabic"/>
-                                <connections>
-                                    <action selector="ArabicSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="We3-6M-DSp"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ScM-HK-xQx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MER-fU-MZj"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ScM-HK-xQx" secondAttribute="bottom" constant="100" id="gLJ-7y-aFj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="ScM-HK-xQx" id="kPM-a8-GAk"/>
+                        <outlet property="scrollView" destination="aWT-qV-j2m" id="PTa-L3-0hg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-41" y="23"/>
+            <point key="canvasLocation" x="-42.399999999999999" y="22.938530734632685"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wbr-1V-zlZ">

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		491D1DE9227DBA6C00AB2E01 /* networkingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D1DE8227DBA6C00AB2E01 /* networkingExtension.swift */; };
+		491D1DEB227DF38500AB2E01 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D1DEA227DF38400AB2E01 /* Slide.swift */; };
+		491D1DED227DF3E000AB2E01 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491D1DEC227DF3E000AB2E01 /* Slide.xib */; };
 		495EC8F7227D4AA700B7451A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC8F6227D4AA700B7451A /* AppDelegate.swift */; };
 		495EC8F9227D4AA700B7451A /* LangSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495EC8F8227D4AA700B7451A /* LangSelectViewController.swift */; };
 		495EC8FC227D4AA700B7451A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495EC8FA227D4AA700B7451A /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		0E438EA814875AD4594DEBF4 /* Pods-cali.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cali.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cali/Pods-cali.debug.xcconfig"; sourceTree = "<group>"; };
 		491D1DE8227DBA6C00AB2E01 /* networkingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkingExtension.swift; sourceTree = "<group>"; };
+		491D1DEA227DF38400AB2E01 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		491D1DEC227DF3E000AB2E01 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		495EC8F3227D4AA700B7451A /* cali.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cali.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495EC8F6227D4AA700B7451A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		495EC8F8227D4AA700B7451A /* LangSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangSelectViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +89,6 @@
 				495EC92B227D548F00B7451A /* View */,
 				495EC92C227D549900B7451A /* Controller */,
 				495EC8FD227D4AA900B7451A /* Assets.xcassets */,
-				495EC8FF227D4AA900B7451A /* LaunchScreen.storyboard */,
 				495EC902227D4AA900B7451A /* Info.plist */,
 			);
 			path = cali;
@@ -97,6 +100,8 @@
 				495EC931227D589600B7451A /* Scene.swift */,
 				495EC933227D58B400B7451A /* Scene.sks */,
 				495EC935227D6BDE00B7451A /* GifCell.swift */,
+				491D1DEA227DF38400AB2E01 /* Slide.swift */,
+				491D1DEC227DF3E000AB2E01 /* Slide.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				495EC8FA227D4AA700B7451A /* Main.storyboard */,
+				495EC8FF227D4AA900B7451A /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491D1DED227DF3E000AB2E01 /* Slide.xib in Resources */,
 				495EC901227D4AA900B7451A /* LaunchScreen.storyboard in Resources */,
 				495EC8FE227D4AA900B7451A /* Assets.xcassets in Resources */,
 				495EC934227D58B400B7451A /* Scene.sks in Resources */,
@@ -254,6 +261,7 @@
 				491D1DE9227DBA6C00AB2E01 /* networkingExtension.swift in Sources */,
 				495EC936227D6BDE00B7451A /* GifCell.swift in Sources */,
 				495EC92E227D54CC00B7451A /* ARViewController.swift in Sources */,
+				491D1DEB227DF38500AB2E01 /* Slide.swift in Sources */,
 				495EC8F9227D4AA700B7451A /* LangSelectViewController.swift in Sources */,
 				495EC8F7227D4AA700B7451A /* AppDelegate.swift in Sources */,
 			);
