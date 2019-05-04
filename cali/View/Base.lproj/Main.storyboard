@@ -53,12 +53,13 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gZP-Ob-iRU">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="YsO-Ip-0Nf"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="76T-3r-KuT">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -71,20 +72,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oF9-ne-yRy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I82-I2-cuS" userLabel="gifImageView">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="oF9-ne-yRy" firstAttribute="leading" secondItem="H4I-mP-BpG" secondAttribute="leading" id="J5Z-Um-WIA"/>
-                                            <constraint firstItem="oF9-ne-yRy" firstAttribute="top" secondItem="H4I-mP-BpG" secondAttribute="top" id="gEZ-z6-YV4"/>
-                                            <constraint firstAttribute="trailing" secondItem="oF9-ne-yRy" secondAttribute="trailing" id="ptv-Um-CEj"/>
-                                            <constraint firstAttribute="bottom" secondItem="oF9-ne-yRy" secondAttribute="bottom" id="t93-dS-aFp"/>
+                                            <constraint firstItem="I82-I2-cuS" firstAttribute="top" secondItem="H4I-mP-BpG" secondAttribute="top" id="8xE-if-V7H"/>
+                                            <constraint firstItem="I82-I2-cuS" firstAttribute="leading" secondItem="H4I-mP-BpG" secondAttribute="leading" id="DW7-Il-sPC"/>
+                                            <constraint firstAttribute="trailing" secondItem="I82-I2-cuS" secondAttribute="trailing" id="qXt-zN-ph7"/>
+                                            <constraint firstAttribute="bottom" secondItem="I82-I2-cuS" secondAttribute="bottom" id="rfe-i8-Bay"/>
                                         </constraints>
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
-                                            <outlet property="gifImageView" destination="oF9-ne-yRy" id="zYT-qV-LiF"/>
+                                            <outlet property="gifImageView" destination="I82-I2-cuS" id="q2Z-qj-2Lr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -96,20 +97,34 @@
                             <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dy-Pa-L1A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                             </arskView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ve1-0o-9UN">
+                                <rect key="frame" x="10" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="JDY-FK-zGW"/>
+                                    <constraint firstAttribute="height" constant="50" id="v8a-gU-uUU"/>
+                                </constraints>
+                                <state key="normal" image="back arraw"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="nKg-MN-1v4" eventType="touchUpInside" id="AKl-Rt-le4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ve1-0o-9UN" firstAttribute="leading" secondItem="DSZ-bx-Edj" secondAttribute="leading" constant="10" id="2Sm-GW-oXW"/>
                             <constraint firstItem="gZP-Ob-iRU" firstAttribute="top" secondItem="3dy-Pa-L1A" secondAttribute="bottom" id="367-fK-YGA"/>
                             <constraint firstItem="gZP-Ob-iRU" firstAttribute="trailing" secondItem="DSZ-bx-Edj" secondAttribute="trailing" id="3c9-CM-LWq"/>
                             <constraint firstItem="3dy-Pa-L1A" firstAttribute="top" secondItem="93k-Ei-uZT" secondAttribute="top" id="Q44-cz-T8h"/>
                             <constraint firstItem="3dy-Pa-L1A" firstAttribute="trailing" secondItem="DSZ-bx-Edj" secondAttribute="trailing" id="Yva-ai-wF1"/>
                             <constraint firstAttribute="bottom" secondItem="gZP-Ob-iRU" secondAttribute="bottom" id="ka7-qX-iM6"/>
                             <constraint firstItem="3dy-Pa-L1A" firstAttribute="leading" secondItem="DSZ-bx-Edj" secondAttribute="leading" id="nSU-ww-dYa"/>
+                            <constraint firstItem="Ve1-0o-9UN" firstAttribute="top" secondItem="DSZ-bx-Edj" secondAttribute="top" constant="10" id="uKF-jD-l55"/>
                             <constraint firstItem="gZP-Ob-iRU" firstAttribute="leading" secondItem="DSZ-bx-Edj" secondAttribute="leading" id="zcg-tD-3bW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DSZ-bx-Edj"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Ve1-0o-9UN" id="gLI-s9-jmI"/>
                         <outlet property="gifCellCollection" destination="gZP-Ob-iRU" id="aDe-le-Lpd"/>
                         <outlet property="sceneView" destination="3dy-Pa-L1A" id="elX-li-ygq"/>
                     </connections>
@@ -119,4 +134,7 @@
             <point key="canvasLocation" x="824.79999999999995" y="22.938530734632685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back arraw" width="1000" height="1000"/>
+    </resources>
 </document>

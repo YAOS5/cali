@@ -14,6 +14,7 @@ import SwiftGifOrigin
 class ARViewController: UIViewController, ARSKViewDelegate {
     
     
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet var sceneView: ARSKView!
     @IBOutlet weak var gifCellCollection: UICollectionView!
     
@@ -26,14 +27,19 @@ class ARViewController: UIViewController, ARSKViewDelegate {
 
         // Set the view's delegate
         sceneView.delegate = self
-        
         // Show statistics such as fps and node count
         sceneView.showsFPS = true
         sceneView.showsNodeCount = true
-        
         // Load the SKScene from 'Scene.sks'
         sceneView.presentScene(scene)
-
+        
+                //        gifCellCollection.backgroundColor = UIColor.clear.withAlphaComponent(0)
+        
+        
+        backButton.layer.shadowColor = UIColor.black.cgColor
+        backButton.layer.shadowOffset = CGSize(width: 1, height: 1)
+        backButton.layer.shadowRadius = 3
+        backButton.layer.shadowOpacity = 1.0
     }
     
     
@@ -81,7 +87,12 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
-
+    
+    
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension ARViewController {
@@ -99,12 +110,19 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gifCell", for: indexPath) as! GifCell
         cell.gifImageView!.loadGif(asset: ("不" + "gif"))
         cell.charName = imageArray[indexPath.row]
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.cornerRadius = 10
+        cell.layer.shadowColor = UIColor.white.cgColor
+        cell.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowOpacity = 1.0
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GifCell
-        cell.layer.borderWidth = 1
+        cell.layer.borderWidth = 3
         cell.layer.borderColor = UIColor.red.cgColor
         cellSelectedAt = indexPath.row
         scene.displayImage()
@@ -112,7 +130,13 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! GifCell
-        cell.layer.borderWidth = 0
+        cell.layer.borderWidth = 2
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.cornerRadius = 10
+        cell.layer.shadowColor = UIColor.white.cgColor
+        cell.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowOpacity = 1.0
         scene.removeAllChildren()
     }
 }

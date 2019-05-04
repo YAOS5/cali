@@ -10,6 +10,7 @@ import UIKit
 
 class GifCell: UICollectionViewCell {
     var charName = ""
+    
     @IBOutlet weak var gifImageView: UIImageView!
     
 }
