@@ -8,10 +8,18 @@
 
 import UIKit
 
-
+protocol didPressButton {
+    func buttonPressed()
+}
 
 class Slide: UIView {
     
     @IBOutlet weak var countryButton: UIButton!
     @IBOutlet weak var countryText: UILabel!
+    
+    var delegate : didPressButton?
+    @IBAction func countryButtonPressed(_ sender: UIButton) {
+        delegate?.buttonPressed()
+    }
+    
 }

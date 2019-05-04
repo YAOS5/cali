@@ -36,6 +36,7 @@
                     <connections>
                         <outlet property="pageControl" destination="ScM-HK-xQx" id="kPM-a8-GAk"/>
                         <outlet property="scrollView" destination="aWT-qV-j2m" id="PTa-L3-0hg"/>
+                        <segue destination="nKg-MN-1v4" kind="show" identifier="toAR" id="s9P-fo-zBJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LangSelectViewController: UIViewController, UIScrollViewDelegate {
+class LangSelectViewController: UIViewController, UIScrollViewDelegate, didPressButton{
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -31,9 +31,10 @@ class LangSelectViewController: UIViewController, UIScrollViewDelegate {
         createSlides()
         setUpScrollView()
         
+        
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
-        scrollView.showsHorizontalScrollIndicator = true
+        scrollView.showsHorizontalScrollIndicator = false
     }
     
     func setUpScrollView() {
@@ -64,9 +65,13 @@ class LangSelectViewController: UIViewController, UIScrollViewDelegate {
         let slide : Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
         slide.countryButton!.setImage(UIImage(named: language), for: .normal)
         slide.countryText.text = language
+        slide.delegate = self
         return slide
     }
-
+    
+    func buttonPressed() {
+        performSegue(withIdentifier: "toAR", sender: self)
+    }
     
 }
 
