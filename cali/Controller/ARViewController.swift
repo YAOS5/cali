@@ -17,7 +17,18 @@ class ARViewController: UIViewController, ARSKViewDelegate {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var sceneView: ARSKView!
     @IBOutlet weak var gifCellCollection: UICollectionView!
+    @IBOutlet weak var scoreLabel: UILabel!
     
+    
+    @IBOutlet var recogniser: UITapGestureRecognizer!
+    @IBAction func tapAction(_ sender: UITapGestureRecognizer) {
+        if scoreLabel.text! == "0" {
+            scoreLabel.text = calculateScore()
+        }
+        else {
+            scoreLabel.text = "0"
+        }
+    }
     var imageArray : [String] = ["不", "中", "他", "是", "有", "来", "这", "的"]
     let scene = SKScene(fileNamed: "Scene") as! Scene
     var cellSelectedAt = 0
@@ -109,6 +120,13 @@ class ARViewController: UIViewController, ARSKViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func calculateScore() -> String {
+        let score = (arc4random_uniform(250) + 600) / 10
+        print(score)
+        return "\(score)"
+    }
+    
 }
 
 extension ARViewController {
@@ -163,3 +181,6 @@ extension ARViewController: UICollectionViewDataSource, UICollectionViewDelegate
 }
 
 
+extension ARViewController {
+    
+}

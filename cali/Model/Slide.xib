@@ -20,29 +20,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhH-zJ-3tQ">
-                    <rect key="frame" x="123.5" y="266" width="167" height="52"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="167" id="BGq-At-ypP"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-3e-CPr">
-                    <rect key="frame" x="147" y="578" width="120" height="33"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="120" id="C4l-9m-Vdv"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                    <rect key="frame" x="122" y="271" width="170.5" height="47"/>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="40"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhg-eZ-n2L">
-                    <rect key="frame" x="157" y="229" width="100" height="27"/>
+                    <rect key="frame" x="159.5" y="233" width="95" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="O6S-OV-8QI"/>
+                        <constraint firstAttribute="width" constant="95" id="qLe-Bf-PdI"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                    <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -60,21 +48,30 @@
                         <action selector="countryButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ghd-nZ-kcb"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-3e-CPr">
+                    <rect key="frame" x="127" y="558" width="160" height="102"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="3Bd-ak-rni"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="EhH-zJ-3tQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F9f-yE-MFB"/>
+                <constraint firstItem="Hhg-eZ-n2L" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9zE-I9-SkB"/>
                 <constraint firstAttribute="bottom" secondItem="fZh-tR-tZQ" secondAttribute="bottom" id="GHp-S3-diK"/>
-                <constraint firstItem="Liz-3e-CPr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HGf-lx-YRg"/>
-                <constraint firstItem="Hhg-eZ-n2L" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IeJ-yh-NaW"/>
+                <constraint firstItem="Liz-3e-CPr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GNQ-zk-VXE"/>
+                <constraint firstItem="EhH-zJ-3tQ" firstAttribute="top" secondItem="Hhg-eZ-n2L" secondAttribute="bottom" constant="10" id="LSH-RU-Y10"/>
+                <constraint firstItem="v4x-H9-h1N" firstAttribute="top" secondItem="EhH-zJ-3tQ" secondAttribute="bottom" constant="40" id="Q0H-iw-1dq"/>
                 <constraint firstItem="fZh-tR-tZQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VGi-wU-vBJ"/>
                 <constraint firstItem="v4x-H9-h1N" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dK9-WU-8Rv"/>
-                <constraint firstItem="v4x-H9-h1N" firstAttribute="top" secondItem="EhH-zJ-3tQ" secondAttribute="bottom" constant="40" id="dLa-AA-49A"/>
                 <constraint firstItem="fZh-tR-tZQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eP6-Dd-3af"/>
                 <constraint firstItem="fZh-tR-tZQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lUK-TM-WIj"/>
                 <constraint firstItem="v4x-H9-h1N" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lip-jL-ozN"/>
-                <constraint firstItem="EhH-zJ-3tQ" firstAttribute="top" secondItem="Hhg-eZ-n2L" secondAttribute="bottom" constant="10" id="maH-RE-azH"/>
-                <constraint firstItem="Liz-3e-CPr" firstAttribute="top" secondItem="v4x-H9-h1N" secondAttribute="bottom" constant="40" id="yUy-0s-Fag"/>
+                <constraint firstItem="Liz-3e-CPr" firstAttribute="top" secondItem="v4x-H9-h1N" secondAttribute="bottom" constant="20" id="qRg-6R-BDJ"/>
+                <constraint firstItem="EhH-zJ-3tQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yam-kK-iT2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
